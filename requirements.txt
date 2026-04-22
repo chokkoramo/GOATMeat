@@ -1,21 +1,15 @@
-# --- Ingesta de Datos ---
+fastapi
+uvicorn
+streamlit
 requests
-beautifulsoup4
 
-# --- Base de Datos Vectorial ---
+langchain
+langchain-community
+langchain-chroma
+langchain-openai
+
 chromadb
 sentence-transformers
 
-# --- Framework RAG ---
-langchain
-langchain-community
-langchain-huggingface
-langchain-chroma
-
-# --- Backend Web ---
-flask
-gunicorn
-flask-cors
-
-# --- UI ---
-streamlit
+python-dotenv
+pydantic
