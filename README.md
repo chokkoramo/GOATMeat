@@ -47,7 +47,7 @@ un asistente inteligente disponible capaz de responder preguntas en segundos, ut
 - **Streamlit** → Interfaz de usuario
 - **LangChain** → Orquestación del flujo RAG
 - **ChromaDB** → Base de datos vectorial
-- **Ollama (Llama3:8B)** → Modelo de lenguaje local
+- **Ollama (Llama3:8B)** → Modelo de lenguaje a partir de Groq
 - **HuggingFace Embeddings** → Vectorización de texto
 - **Docker** → Contenerización
 
@@ -91,7 +91,12 @@ cd <tu-repo>
 ollama pull llama3:8b
 ```
 
-3. Ejecutar el proyecto:
+3. Configurar archivo .env
+```bash
+GROQ_API_KEY="tu_key"
+```
+
+4. Ejecutar el proyecto:
 ```bash
 docker compose up --build
 ```
