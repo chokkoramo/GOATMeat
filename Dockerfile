@@ -7,9 +7,9 @@ ENV PYTHONPATH=/app
 WORKDIR /app
 COPY requirements.txt .
 
-RUN grep -v "sentence-transformers" requirements.txt > requirements_filtered.txt
+#RUN grep -v "sentence-transformers" requirements.txt > requirements_filtered.txt
 
-RUN pip install --no-cache-dir -r requirements_filtered.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 

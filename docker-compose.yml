@@ -1,0 +1,17 @@
+version: "3.10"
+
+services:
+  app:
+    build: .
+    container_name: BravoBot_Cont
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    volumes:
+      - ./models:/root/.cache/huggingface
+    environment:
+      - PYTHONPATH=/app
+      - TRANSFORMERS_CACHE=/root/.cache/huggingface
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
