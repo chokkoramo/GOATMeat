@@ -81,8 +81,8 @@ El sistema sigue un enfoque **RAG (Retrieval-Augmented Generation)**:
 1. Clonar el repositorio:
 
 ```bash
-git clone <tu-repo>
-cd <tu-repo>
+git clone https://github.com/chokkoramo/GOATMeat.git
+cd tu_ruta
 ```
 
 2. Descargar el modelo:
@@ -90,6 +90,10 @@ cd <tu-repo>
 ```bash
 ollama pull llama3:8b
 ```
+
+> [!NOTE]
+> Tambien puedes usar un token de Groq para usar el modelo dentro del codigo.
+> https://groq.com/
 
 3. Configurar archivo .env
 ```bash
@@ -131,6 +135,7 @@ API: http://localhost:8000
 
 - Thomas Grisales
 
+### DataHack - ExpoTecnologica 2026 - IU Pascual Bravo
 
 
 
