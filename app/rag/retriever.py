@@ -1,12 +1,15 @@
 import os
+from dotenv import load_dotenv
 
 from langchain_chroma import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms import Ollama
+from langchain_groq import ChatGroq
 
 from langchain_core.prompts import PromptTemplate
 from langchain_classic.chains import RetrievalQA
 
+load_dotenv()
 
 VECTORSTORE_PATH = "app/vectorstore"
 
@@ -70,10 +73,9 @@ Respuesta:
 
     print("Cargando modelo LLM...")
 
-    llm = Ollama(
-        model="llama3:8b",
-        temperature=0,
-        base_url="http://host.docker.internal:11434"
+    llm = ChatGroq(
+        model="llama-3.1-8b-instant",
+        api_key=os.getenv("GROQ_API_KEY")
     )
 
     qa = RetrievalQA.from_chain_type(

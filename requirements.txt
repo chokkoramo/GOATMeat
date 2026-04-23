@@ -6,7 +6,7 @@ requests
 langchain
 langchain-community
 langchain-chroma
-langchain-openai
+langchain_groq
 
 chromadb
 sentence-transformers
